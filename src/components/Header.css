@@ -1,0 +1,13 @@
+.header-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+  padding: 3rem 2rem;
+  font-size: 1.6rem;
+}
+
+.header-text h1 {
+  text-align: center;
+}

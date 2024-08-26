@@ -1,0 +1,8 @@
+.header-container {
+  background: url(../assets/photos/sword.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 100vh;
+  height: 100vh;
+}

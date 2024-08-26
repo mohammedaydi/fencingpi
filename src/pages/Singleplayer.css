@@ -1,0 +1,21 @@
+.singleplayer-container {
+  display: flex;
+  /* background-color: aqua; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem;
+  min-height: 100vh;
+
+  background: url(../assets/photos/wide-sword.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .singleplayer-container {
+    background: url(../assets/photos/sword.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

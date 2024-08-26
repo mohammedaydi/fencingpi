@@ -1,0 +1,64 @@
+.multiplayer-container {
+  display: flex;
+  /* background-color: aqua; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem;
+  min-height: 100vh;
+  width: 100%;
+
+  gap: 1rem;
+}
+
+.multiplayer-container__select {
+  display: flex;
+  justify-content: center;
+  padding: 0rem;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: row;
+  width: 100%;
+  flex-direction: column;
+}
+
+.multiplayer-container__select-1 {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  min-height: 50%;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.multiplayer-container__select-2 {
+  background-color: purple;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  min-height: 50%;
+}
+.multiplayer-container__select-2 p,
+.multiplayer-container__select-1 p {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0rem 10%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.picked-player {
+  flex: 2.5;
+  transition: linear 300ms;
+}
+
+.unpicked-player {
+  flex: 0.5;
+  transition: linear 300ms;
+}
