@@ -30,22 +30,34 @@ const Playlist = (props) => {
   };
   const singlePlayerHandler = async () => {
     checkIfAvailable();
-    const response = await fetch(`${apiBaseUrl}`);
+    const response = await fetch(`${apiBaseUrl}/start/single`);
 
     const response_data = await response.json();
     if (response.ok) {
-      console.log(response_data.from_backend);
+      // console.log(response_data.from_backend);
     } else {
       console.log("error could not reach backend");
     }
   };
-  const multiplayerHandler = async () => {
+  const dualAIHandler = async () => {
     checkIfAvailable();
-    const response = await fetch(`${apiBaseUrl}`);
+    const response = await fetch(`${apiBaseUrl}/start/dual`);
 
     const response_data = await response.json();
     if (response.ok) {
-      console.log(response_data.from_backend);
+      // console.log(response_data.from_backend);
+    } else {
+      console.log("error could not reach backend");
+    }
+  };
+
+  const multiplayerHandler = async () => {
+    checkIfAvailable();
+    const response = await fetch(`${apiBaseUrl}/start/multi`);
+
+    const response_data = await response.json();
+    if (response.ok) {
+      // console.log(response_data.from_backend);
     } else {
       console.log("error could not reach backend");
     }
@@ -66,7 +78,9 @@ const Playlist = (props) => {
           </Link>
         </div>
         <div>
-          <button>Login</button>
+          <Link to="/dual">
+            <button onClick={dualAIHandler}>Dual AI</button>
+          </Link>
         </div>
         <div>
           <button onClick={props.logoutHandler}>Logout</button>

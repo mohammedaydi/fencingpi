@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
-import Controlbox from "../components/Controlbox";
+import { useState, useEffect } from "react";
 import Health from "../components/Health";
-import "./Singleplayer.css";
-import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const Singleplayer = () => {
+import "./DualAI.css";
+
+const DualAI = () => {
   const [gameTimer, setGameTimer] = useState(0);
   const [purpleLevel, setPurpleLevel] = useState(100);
   const [blackLevel, setBlackLevel] = useState(100);
@@ -58,7 +57,6 @@ const Singleplayer = () => {
     <>
       {gameState && (
         <div className="singleplayer-container">
-          <h1>Purple</h1>
           <h1>{gameTimer}</h1>
           <Health
             purpleLevel={purpleLevel}
@@ -66,10 +64,8 @@ const Singleplayer = () => {
             setPurpleLevel={setPurpleLevel}
             setBlackLevel={setBlackLevel}
           />
-          <Controlbox />
         </div>
       )}
-
       {!gameState && (
         <div className="singleplayer-container">
           <h1>{gameText}</h1>
@@ -79,4 +75,4 @@ const Singleplayer = () => {
   );
 };
 
-export default Singleplayer;
+export default DualAI;

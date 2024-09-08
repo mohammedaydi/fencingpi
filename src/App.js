@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { useState, useEffect, useCallback } from "react";
 import "./App.css";
+import DualAI from "./pages/DualAI";
 
 const App = () => {
   const [isPlayer, setIsPlayer] = useState(false);
@@ -33,6 +34,7 @@ const App = () => {
         />
         <Route path="/singleplayer" Component={Singleplayer} />
         <Route path="/multiplayer" Component={MultiPlayer} />
+        <Route path="/dual" Component={DualAI} />
       </Routes>
     );
   } else if (isLoggedIn && !isPlayer) {

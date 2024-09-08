@@ -1,7 +1,7 @@
 import "./Controlbox.css";
 const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
 
-const Controlbox = () => {
+const Controlbox = (props) => {
   const actionsHandler = async (event) => {
     let extension;
     let forward_btn = document.getElementById("forwardBtn");
@@ -34,7 +34,13 @@ const Controlbox = () => {
         extension = "side";
         break;
     }
-    const response = await fetch(`${apiBaseUrl}/${extension}`);
+    let extension2 = "";
+    if (props.pickedSide == 1) {
+      //if black player
+      extension2 = "2";
+    }
+    const response = await fetch(`${apiBaseUrl}/${extension}${extension2}`);
+    console.log(`${apiBaseUrl}/${extension}${extension2}`);
 
     const response_data = await response.json();
     if (response.ok) {

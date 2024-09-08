@@ -8,6 +8,9 @@
   padding: 0.2rem 0rem;
 }
 
+.health-container__wrapper h3 {
+  color: white;
+}
 .health-container__wrapper {
   display: flex;
   flex-direction: column;

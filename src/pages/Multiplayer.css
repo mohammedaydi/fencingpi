@@ -8,7 +8,18 @@
   min-height: 100vh;
   width: 100%;
 
+  background: url(../assets/photos/wide-sword.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
   gap: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .multiplayer-container {
+    background: url(../assets/photos/sword.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .multiplayer-container__select {
@@ -53,6 +64,7 @@
   text-align: center;
   font-size: 0.8rem;
 }
+
 .picked-player {
   flex: 2.5;
   transition: linear 300ms;
@@ -61,4 +73,7 @@
 .unpicked-player {
   flex: 0.5;
   transition: linear 300ms;
+}
+h1 {
+  color: white;
 }
